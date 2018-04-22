@@ -1,24 +1,38 @@
 /* eslint-disable */
-import MyComponent from './MyComponent'
+
+import { deliveryActivitiesTileCoreConfig } from './activities-tile-configuration';
+const BASE_URL = 'app/amdocs/smallcell/components/business/project-overview/';
+const ICONS_URL = BASE_URL + 'icons/';
 
 dop.projectOverviewDeliveryConfiguration = {
 
   children: {
     pndCard: {
       props: {
-        title: "Pnd Title From Delivery"
+        actions: {
+          'pndActionFromDelivery': {
+            displayName: 'Action From Delivery',
+            iconURL: ICONS_URL + 'SV_ANN.svg',
+            iconURLHover: ICONS_URL + 'SV_ANN.svg',
+            onClick: function() {
+              alert('Action from delivery clicked');
+            }
+          },
+        }
       }
     },
-    deliveryCard: {
-      type: '${Card}',
+    milestonesCard: {
       props: {
-        title: 'Card from Delivery Layer',
+        actions: {
+          'seeAllMilestonesAction': "_REMOVE"
+        }
       },
-      children:{
-        planId:{
-          type: MyComponent,
+    },
+    activitiesCard: {
+      children: {
+        activitiesList: {
           props: {
-            eventManager: '${eventManager}'
+            tileConfiguration: deliveryActivitiesTileCoreConfig
           }
         }
       }
