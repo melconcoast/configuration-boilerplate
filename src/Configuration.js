@@ -1,5 +1,5 @@
 /* eslint-disable */
-
+import MyComponent from './MyComponent';
 import { deliveryActivitiesTileCoreConfig } from './activities-tile-configuration';
 const BASE_URL = 'app/amdocs/smallcell/components/business/project-overview/';
 const ICONS_URL = BASE_URL + 'icons/';
@@ -34,6 +34,14 @@ dop.projectOverviewDeliveryConfiguration = {
           props: {
             tileConfiguration: deliveryActivitiesTileCoreConfig
           }
+        }
+      }
+    },
+    MyComponent: {
+      type: '${Card}',
+      children: {
+        myComponent: {
+          type: MyComponent
         }
       }
     }

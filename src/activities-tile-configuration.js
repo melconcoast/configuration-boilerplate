@@ -4,13 +4,8 @@ export const deliveryActivitiesTileCoreConfig = {
     cells: {
         mainTile: {
             taskOwnerCell: {
-                field: "additionalDetails.TaskOwnerId",
+                field: "extension.TaskOwnerId",
                 view: "text"
-            },
-            plannedDueDate: {
-              field: "plannedDueDate",
-              format: "MMMM Do YYYY",
-              view: "date"
             },
             activityStatusCell: "_REMOVE",
         },
