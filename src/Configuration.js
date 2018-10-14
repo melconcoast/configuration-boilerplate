@@ -1,50 +1,25 @@
 /* eslint-disable */
-import MyComponent from './MyComponent';
-import { deliveryActivitiesTileCoreConfig } from './activities-tile-configuration';
-const BASE_URL = 'app/amdocs/smallcell/components/business/project-overview/';
-const ICONS_URL = BASE_URL + 'icons/';
+import MyType from './MyComponent';
 
-dop.projectOverviewDeliveryConfiguration = {
+dop.projectDetailsHeaderDeliveryConfiguration = {
 
   children: {
-    pndCard: {
+    newField: {
+      type: MyType,
       props: {
-        actions: {
-          'pndActionFromDelivery': {
-            displayName: 'Action From Delivery',
-            iconURL: ICONS_URL + 'SV_ANN.svg',
-            iconURLHover: ICONS_URL + 'SV_ANN.svg',
-            onClick: function() {
-              alert('Action from delivery clicked');
-            }
-          },
-        }
+        fieldName: 'statusField',
+        label: 'New Status Field',
+        value: '${project.status.decode}'
+
       }
     },
-    milestonesCard: {
+    delayField: {
       props: {
-        actions: {
-          'seeAllMilestonesAction': "_REMOVE"
-        }
-      },
-    },
-    activitiesCard: {
-      children: {
-        activitiesList: {
-          props: {
-            tileConfiguration: deliveryActivitiesTileCoreConfig
-          }
-        }
+        hide: true,
+        style: {color: 'blue'}
       }
     },
-    MyComponent: {
-      type: '${Card}',
-      children: {
-        myComponent: {
-          type: MyComponent
-        }
-      }
-    }
   }
+
 };
 

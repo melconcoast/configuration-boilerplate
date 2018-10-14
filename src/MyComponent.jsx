@@ -8,6 +8,6 @@ export default class MyComponent extends Component {
   }
 
   render() {
-    return <div>Counter from application 123</div>;
+    return <span>{this.props.label}:{this.props.value}</span>;
   }
 }
