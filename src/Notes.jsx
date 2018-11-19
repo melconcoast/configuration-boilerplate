@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { animateScroll } from "react-scroll";
+import  {animateScroll}  from "react-scroll";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class Notes extends Component {
 
@@ -34,7 +35,7 @@ export default class Notes extends Component {
       axios.post('be-services/projectManagement/project/'+this.id+'/note', generateNewNote).then( function(){
           this.fetchData();
           this.state.newNote= "";
-          this.setState(this.state);//, this.scrollToBottom
+          this.setState(this.state, this.scrollToBottom);
           }.bind(this)
       ).catch(function (error) {
           console.log(error);
@@ -42,11 +43,13 @@ export default class Notes extends Component {
 
   }
 
-    // scrollToBottom() {
-    //     animateScroll.scrollToBottom({
-    //         containerId: "notesList"
-    //     });
-    // }
+    scrollToBottom() {
+        animateScroll.scrollToBottom({
+            containerId: "notesList"
+        });
+    }
+
+
 
     handleChange = (event) => {
         this.setState({newNote: event.target.value})
@@ -63,8 +66,14 @@ export default class Notes extends Component {
             <div id="notesList" className="notesList">
                 {this.state.data.map(elem => {
                     if(elem.isUrgent)
-                        return (<div className="commentUrgent" key={elem.id}>{elem.createdBy.userId},
-                        {new Date(elem.createdDate.toString()).toDateString()}<div>{elem.text}</div></div>)
+                        return (
+                            <ReactCSSTransitionGroup
+                                transitionName="fade"
+                                transitionEnterTimeout={500}
+                                transitionLeaveTimeout={300}>
+                            <div className="commentUrgent" key={elem.id}>{elem.createdBy.userId},
+                        {new Date(elem.createdDate.toString()).toDateString()}<div>{elem.text}</div></div>
+                            </ReactCSSTransitionGroup>)
                     else{
                         return (<div className="comment" key={elem.id}>{elem.createdBy.userId},
                             {new Date(elem.createdDate.toString()).toDateString()}<div>{elem.text}</div></div>)
