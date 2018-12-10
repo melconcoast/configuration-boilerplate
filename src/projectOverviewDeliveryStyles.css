@@ -1,0 +1,135 @@
+.notesList{
+    overflow: auto;
+    top:0; height:65%;
+    padding:10px 20px 15px 5px;
+    line-height: 18px;
+    font-family: Segoe UI Semibold;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.notesInput{
+    width: 93%;
+    height: 50%;
+    font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", Arial;
+    font-size: 12px;
+    color: #2f3538;
+    font-weight: normal;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    resize: none;
+    moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border-color: #aaa;
+}
+
+.innerButton{
+    font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", Arial;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: normal;
+    display: block;
+    min-width: 70px;
+    height: 33px;
+    line-height: 19px;
+    padding: 5px 15px;
+    background-color: #2f3538;
+    color: #7ddddd;
+    cursor: pointer;
+    text-align: center;
+    moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    min-width: 10px;
+    background: #7ddddd;
+    color: #2f3538;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: #01afd1;
+    color: #ffffff;
+}
+
+.comment{
+    padding: 10px 10px 15px 10px;
+    overflow: auto;
+    margin: 8px;
+    background: #eff2f3;
+    border-radius: 15px;
+    border: 2px dashed #01afd1;
+
+    font-weight: bold;
+    font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", Arial;
+    font-size: 14px;
+
+}
+
+.commentUrgent{
+    color: #fe7550;
+    padding: 10px 10px 15px 10px;
+    margin: 8px;
+    background: #e8e8e8;
+    border-radius: 15px;
+    border: 2px dashed #fe7550;
+
+    font-weight: bold;
+    font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", Arial;
+    font-size: 14px;
+}
+
+.urgentFlagLabel{
+    line-height: 29px;
+    margin-left: 3px;
+    margin-right: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 165px;
+    height: 31px;
+    vertical-align: middle;
+    color: #72848c;
+}
+
+.addNoteFieldContainer{
+    padding: 10px;
+    top:50%;
+    height:35%;
+    background-color: #eff2f3;//#d7d7d7;
+    width: 90%;
+    padding:10px 20px 15px 5px;
+    line-height: 18px;
+    font-family: Segoe UI Semibold;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.mainContainer{
+    height: 100%;
+    overflow: hidden;
+}
+
+.comment::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+div {
+    font-weight: normal;
+}
+
+.fade-enter {
+    opacity: 0.01;
+    background: black;
+}
+
+.fade-enter.fade-enter-active {
+    background: #00A2D3;
+    opacity: 1;
+    transition: opacity 5s ease-in;
+}
