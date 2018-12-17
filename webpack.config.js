@@ -7,7 +7,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'projectOverviewDeliveryConfiguration.js',
+    filename: 'deliveryProjectsListConfiguration.js',
     publicPath: '/',
   },
   resolve: {

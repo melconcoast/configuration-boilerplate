@@ -133,3 +133,7 @@ div {
     opacity: 1;
     transition: opacity 5s ease-in;
 }
+
+.MyColumn{
+    background: #00A2D3;
+}
