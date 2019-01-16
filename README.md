@@ -1,6 +1,6 @@
 # configuration-boilerplate for searchable project attribute
 
-To add a new searchable attribute in project header add a new field in _children_ object.
+To add a new searchable attribute in project header add a new field in _children_ object in *projectDetailsHeaderDeliveryConfiguration.js*.
 
 **Here is an example -**
 
