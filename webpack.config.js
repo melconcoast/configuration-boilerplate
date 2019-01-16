@@ -3,11 +3,11 @@ const path = require('path');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    path.join(__dirname, 'src', 'Configuration.js'),
+    path.join(__dirname, 'src', 'projectDetailsHeaderDeliveryConfiguration.js'),
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'configuration.js',
+    filename: 'projectDetailsHeaderDeliveryConfiguration.js',
     publicPath: '/',
   },
   resolve: {
