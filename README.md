@@ -23,4 +23,4 @@ children_: {
 * **code** : attribute code in _project.projectAttribute_ Object
 * **project.projectAttribute** : Object where all searchable attributes will be present.
 
-__Thants all!__
+__Thats all!__
