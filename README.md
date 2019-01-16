@@ -5,7 +5,7 @@ To add a new searchable attribute in project header add a new field in _children
 **Here is an example -**
 
 ```javascript
-children_: {
+children: {
     paceField: {
       type: ProjectAttributeElement,
       props: {
