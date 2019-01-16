@@ -20,3 +20,7 @@ children_: {
   
 * **paceField** : unique field id
 * **PACE Number:** : field display name
+* **code** : attribute code in _project.projectAttribute_ Object
+* **project.projectAttribute** : Object where all searchable attributes will be present.
+
+__Thants all!__
